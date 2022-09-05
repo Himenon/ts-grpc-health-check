@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# 1.2.0 (2022-09-05)
+
+
+### Features
+
+* add hooks ([#9](https://github.com/Himenon/ts-grpc-health-check/issues/9)) ([9cfd1ae](https://github.com/Himenon/ts-grpc-health-check/commit/9cfd1ae))
+
+
+
+
+
 <a name="1.1.7"></a>
 ## 1.1.7 (2022-09-05)
 
