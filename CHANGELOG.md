@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.2"></a>
+## 1.1.2 (2022-09-05)
+
+
+### Bug Fixes
+
+* esm2 ([#3](https://github.com/Himenon/ts-grpc-health-check/issues/3)) ([3b21b70](https://github.com/Himenon/ts-grpc-health-check/commit/3b21b70))
+
+
+
+
+
 <a name="1.1.1"></a>
 ## 1.1.1 (2022-09-05)
 
