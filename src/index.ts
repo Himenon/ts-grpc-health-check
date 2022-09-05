@@ -6,12 +6,17 @@ import * as health_pb from "./v1/health_pb.js";
 
 export type StatusMap = Record<string, number | undefined>;
 
-const createHealthServerImpl = (statusMap: StatusMap = {}): health_grpc_pb.IHealthServer => {
+export type Option = {
+  checkHooks?: () => void;
+  watchHooks?: () => void;
+};
+
+const createHealthServerImpl = (statusMap: StatusMap = {}, option?: Option): health_grpc_pb.IHealthServer => {
   const watchErrorMap: Record<string, Error> = {};
   const watchStatusMap: Record<string, health_pb.HealthCheckResponse.ServingStatus> = {};
   const server: health_grpc_pb.IHealthServer = {
     check: (call, callback) => {
-      console.log("きたのでは？");
+      option?.checkHooks?.();
       const service: string = call.request.getService();
       const status = statusMap[service];
 
@@ -27,6 +32,7 @@ const createHealthServerImpl = (statusMap: StatusMap = {}): health_grpc_pb.IHeal
       }
     },
     watch: call => {
+      option?.watchHooks?.();
       const service: string = call.request.getService();
       const interval = setInterval(() => {
         // Updated status is used for getting service status updates.
