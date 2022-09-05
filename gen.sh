@@ -2,7 +2,7 @@
 
 # protos/helloworld.proto
 PROTO_SRC=protos
-PROTO_DEST=src/protos
+PROTO_DEST=src/v1
 
 rm -rf $PROTO_DEST
 
