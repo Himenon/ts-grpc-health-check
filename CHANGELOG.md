@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.4"></a>
+## 1.1.4 (2022-09-05)
+
+
+### Bug Fixes
+
+* exports ([#5](https://github.com/Himenon/ts-grpc-health-check/issues/5)) ([3f23488](https://github.com/Himenon/ts-grpc-health-check/commit/3f23488))
+
+
+
+
+
 <a name="1.1.3"></a>
 ## 1.1.3 (2022-09-05)
 
