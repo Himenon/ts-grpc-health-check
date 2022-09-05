@@ -23,22 +23,7 @@
   },
   "sideEffects": false,
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./lib/index.js",
-      "default": "./lib/index.js"
-    },
-    "./v1/health_pb.js": {
-      "import": "./lib/v1/health_grpc_pb.js",
-      "default": "./lib/v1/health_grpc_pb.js"
-    },
-    "./v1/health_grpc_pb.js": {
-      "import": "./lib/v1/health_grpc_pb.js",
-      "default": "./lib/v1/health_grpc_pb.js"
-    },
-    "./package.json": "./package.json"
-  },
-  "main": "./lib/index.cjs",
+  "main": "./lib/index.js",
   "module": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "directories": {
