@@ -1,8 +1,8 @@
 import { status as GrpcStatus } from "@grpc/grpc-js";
 
-import { GrpcError } from "./GrpcError";
-import * as health_grpc_pb from "./v1/health_grpc_pb";
-import * as health_pb from "./v1/health_pb";
+import { GrpcError } from "./GrpcError.js";
+import * as health_grpc_pb from "./v1/health_grpc_pb.js";
+import * as health_pb from "./v1/health_pb.js";
 
 export type StatusMap = Record<string, number | undefined>;
 
