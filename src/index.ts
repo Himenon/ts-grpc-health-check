@@ -6,12 +6,18 @@ import * as health_pb from "./v1/health_pb.js";
 
 export type StatusMap = Record<string, number | undefined>;
 
+export { health_grpc_pb, health_pb };
+
 export type Option = {
   checkHooks?: () => void;
   watchHooks?: () => void;
 };
 
-const createHealthServerImpl = (statusMap: StatusMap = {}, option?: Option): health_grpc_pb.IHealthServer => {
+const defaultStatusMap: StatusMap = {
+  "": health_pb.HealthCheckResponse.ServingStatus.SERVING,
+};
+
+const createHealthServerImpl = (statusMap: StatusMap = defaultStatusMap, option?: Option): health_grpc_pb.IHealthServer => {
   const watchErrorMap: Record<string, Error> = {};
   const watchStatusMap: Record<string, health_pb.HealthCheckResponse.ServingStatus> = {};
   const server: health_grpc_pb.IHealthServer = {
@@ -80,5 +86,4 @@ export default {
   createHealthServerImpl,
   service: health_grpc_pb.HealthService,
   Client: health_grpc_pb.HealthClient,
-  messages: health_pb,
 };

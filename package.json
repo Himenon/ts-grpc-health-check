@@ -35,8 +35,10 @@
     "README.md"
   ],
   "scripts": {
-    "build": "run-s code:gen format build:tsc",
+    "build": "run-s code:gen format build:tsc copy:proto",
     "build:tsc": "tsc -b tsconfig.esm.json",
+    "copy:proto": "cpx \"./src/v1/*.{js,d.ts}\" \"./lib/v1/\"",
+    "watch": "tsc -b tsconfig.esm.json -w",
     "code:gen": "./gen.sh",
     "clean": "pnpm ts ./scripts/clean.ts",
     "format": "run-s prettier:format eslint:format",
@@ -72,6 +74,7 @@
     "@typescript-eslint/eslint-plugin": "5.29.0",
     "@typescript-eslint/parser": "5.29.0",
     "conventional-changelog-angular-all": "1.7.0",
+    "cpx": "^1.5.0",
     "cross-env": "^7.0.3",
     "eslint": "8.18.0",
     "eslint-config-prettier": "8.5.0",
