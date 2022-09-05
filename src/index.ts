@@ -9,8 +9,8 @@ export type StatusMap = Record<string, number | undefined>;
 export { health_grpc_pb, health_pb };
 
 export type Option = {
-  checkHooks?: () => void;
-  watchHooks?: () => void;
+  checkHooks?: (req: health_pb.HealthCheckRequest) => void;
+  watchHooks?: (req: health_pb.HealthCheckRequest) => void;
 };
 
 const defaultStatusMap: StatusMap = {
@@ -22,7 +22,7 @@ const createHealthServerImpl = (statusMap: StatusMap = defaultStatusMap, option?
   const watchStatusMap: Record<string, health_pb.HealthCheckResponse.ServingStatus> = {};
   const server: health_grpc_pb.IHealthServer = {
     check: (call, callback) => {
-      option?.checkHooks?.();
+      option?.checkHooks?.(call.request);
       const service: string = call.request.getService();
       const status = statusMap[service];
 
@@ -38,7 +38,7 @@ const createHealthServerImpl = (statusMap: StatusMap = defaultStatusMap, option?
       }
     },
     watch: call => {
-      option?.watchHooks?.();
+      option?.watchHooks?.(call.request);
       const service: string = call.request.getService();
       const interval = setInterval(() => {
         // Updated status is used for getting service status updates.
