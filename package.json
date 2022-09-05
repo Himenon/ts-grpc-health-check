@@ -1,18 +1,19 @@
 {
-  "name": "@himenon/template-esm-js",
-  "version": "1.1.2",
-  "description": "ESModule Library Template",
+  "name": "@himenon/ts-grpc-health-check",
+  "version": "1.0.0",
+  "description": "Grpc Health Check Implements",
   "keywords": [
-    "template",
+    "grpc",
+    "health check",
     "typescript"
   ],
-  "homepage": "https://github.com/Himenon/template-esm-js#readme",
+  "homepage": "https://github.com/Himenon/ts-grpc-health-check#readme",
   "bugs": {
-    "url": "https://github.com/Himenon/template-esm-js/issues"
+    "url": "https://github.com/Himenon/ts-grpc-health-check/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Himenon/template-esm-js.git"
+    "url": "git@github.com:Himenon/ts-grpc-health-check.git"
   },
   "license": "MIT",
   "author": {
@@ -21,7 +22,6 @@
     "url": "https://github.com/Himenon"
   },
   "sideEffects": false,
-  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/index.js",
