@@ -25,26 +25,26 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "node": "./dist/index.cjs",
-      "default": "./dist/index.js"
+      "import": "./lib/index.js",
+      "default": "./lib/index.js"
     },
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "directories": {
+    "lib": "lib",
     "dist": "dist"
   },
   "files": [
-    "dist",
+    "lib",
     "package.json",
     "README.md"
   ],
   "scripts": {
-    "build": "run-s code:gen format && tsup src/*.ts",
+    "build": "run-s code:gen format build:tsc",
+    "build:tsc": "tsc -b tsconfig.esm.json",
     "code:gen": "./gen.sh",
     "clean": "pnpm ts ./scripts/clean.ts",
     "format": "run-s prettier:format eslint:format",
