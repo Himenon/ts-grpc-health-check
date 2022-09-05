@@ -1,6 +1,6 @@
 {
   "name": "@himenon/ts-grpc-health-check",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Grpc Health Check Implements",
   "keywords": [
     "grpc",
