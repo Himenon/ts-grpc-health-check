@@ -1,4 +1,4 @@
-# @himenon/template-esm-js
+# @himenon/ts-grpc-health-check
 
 ## Usage
 
