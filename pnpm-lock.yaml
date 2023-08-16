@@ -20,6 +20,7 @@ specifiers:
   lint-staged: 14.0.0
   npm-run-all: 4.1.5
   prettier: 3.0.2
+  protobufjs: '>=7.2.4'
   simple-git-hooks: ^2.9.0
   sort-package-json: 2.5.1
   tsup: ^7.2.0
@@ -46,6 +47,7 @@ devDependencies:
   lint-staged: 14.0.0
   npm-run-all: 4.1.5
   prettier: 3.0.2
+  protobufjs: 7.2.4
   simple-git-hooks: 2.9.0
   sort-package-json: 2.5.1
   tsup: 7.2.0_qsie35me4wdq7k5equdkq6utkq
@@ -331,7 +333,7 @@ packages:
       '@types/long': 4.0.2
       lodash.camelcase: 4.3.0
       long: 4.0.0
-      protobufjs: 7.1.0
+      protobufjs: 7.2.4
       yargs: 16.2.0
     dev: true
 
@@ -6006,8 +6008,8 @@ packages:
       read: 2.1.0
     dev: true
 
-  /protobufjs/7.1.0:
-    resolution: {integrity: sha512-rCuxKlh0UQKSMjrpIcTLbR5TtGQ52cgs1a5nUoPBAKOccdPblN67BJtjrbtudUJK6HmBvUdsmymyYOzO7lxZEA==}
+  /protobufjs/7.2.4:
+    resolution: {integrity: sha512-AT+RJgD2sH8phPmCf7OUZR8xGdcJRga4+1cOaXJ64hvcSkVhNcRHOwIxUatPH15+nj59WAGTDv3LSGZPEQbJaQ==}
     engines: {node: '>=12.0.0'}
     requiresBuild: true
     dependencies:
