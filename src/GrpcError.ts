@@ -17,7 +17,10 @@ export class GrpcError implements ServerErrorResponse {
   public metadata?: Metadata | undefined;
   public name = "Error";
   public stack?: string | undefined;
-  constructor(public message: string, options?: Partial<Options>) {
+  constructor(
+    public message: string,
+    options?: Partial<Options>,
+  ) {
     this.code = options?.code;
     this.details = options?.details;
     this.metadata = options?.metadata;
