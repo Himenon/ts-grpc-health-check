@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.2"></a>
+## 1.3.2 (2023-08-16)
+
+
+### Chores
+
+* **deps:** update dependencies ([#12](https://github.com/Himenon/ts-grpc-health-check/issues/12)) ([ededc56](https://github.com/Himenon/ts-grpc-health-check/commit/ededc56))
+
+
+
+
+
 <a name="1.3.1"></a>
 ## 1.3.1 (2022-09-06)
 
