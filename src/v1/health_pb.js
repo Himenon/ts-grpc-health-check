@@ -101,7 +101,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
    * @return {!Object}
    * @suppress {unusedLocalVariables} f is only used for nested messages
    */
-  proto.grpc.health.v1.HealthCheckRequest.toObject = function (includeInstance, msg) {
+  proto.grpc.health.v1.HealthCheckRequest.toObject = (includeInstance, msg) => {
     var f,
       obj = {
         service: jspb.Message.getFieldWithDefault(msg, 1, ""),
@@ -119,7 +119,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.health.v1.HealthCheckRequest}
  */
-proto.grpc.health.v1.HealthCheckRequest.deserializeBinary = function (bytes) {
+proto.grpc.health.v1.HealthCheckRequest.deserializeBinary = (bytes) => {
   var reader = new jspb.BinaryReader(bytes);
   var msg = new proto.grpc.health.v1.HealthCheckRequest();
   return proto.grpc.health.v1.HealthCheckRequest.deserializeBinaryFromReader(msg, reader);
@@ -132,7 +132,7 @@ proto.grpc.health.v1.HealthCheckRequest.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.health.v1.HealthCheckRequest}
  */
-proto.grpc.health.v1.HealthCheckRequest.deserializeBinaryFromReader = function (msg, reader) {
+proto.grpc.health.v1.HealthCheckRequest.deserializeBinaryFromReader = (msg, reader) => {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -168,7 +168,7 @@ proto.grpc.health.v1.HealthCheckRequest.prototype.serializeBinary = function () 
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.health.v1.HealthCheckRequest.serializeBinaryToWriter = function (message, writer) {
+proto.grpc.health.v1.HealthCheckRequest.serializeBinaryToWriter = (message, writer) => {
   var f = undefined;
   f = message.getService();
   if (f.length > 0) {
@@ -218,7 +218,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
    * @return {!Object}
    * @suppress {unusedLocalVariables} f is only used for nested messages
    */
-  proto.grpc.health.v1.HealthCheckResponse.toObject = function (includeInstance, msg) {
+  proto.grpc.health.v1.HealthCheckResponse.toObject = (includeInstance, msg) => {
     var f,
       obj = {
         status: jspb.Message.getFieldWithDefault(msg, 1, 0),
@@ -236,7 +236,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
  * @return {!proto.grpc.health.v1.HealthCheckResponse}
  */
-proto.grpc.health.v1.HealthCheckResponse.deserializeBinary = function (bytes) {
+proto.grpc.health.v1.HealthCheckResponse.deserializeBinary = (bytes) => {
   var reader = new jspb.BinaryReader(bytes);
   var msg = new proto.grpc.health.v1.HealthCheckResponse();
   return proto.grpc.health.v1.HealthCheckResponse.deserializeBinaryFromReader(msg, reader);
@@ -249,7 +249,7 @@ proto.grpc.health.v1.HealthCheckResponse.deserializeBinary = function (bytes) {
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
  * @return {!proto.grpc.health.v1.HealthCheckResponse}
  */
-proto.grpc.health.v1.HealthCheckResponse.deserializeBinaryFromReader = function (msg, reader) {
+proto.grpc.health.v1.HealthCheckResponse.deserializeBinaryFromReader = (msg, reader) => {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -285,7 +285,7 @@ proto.grpc.health.v1.HealthCheckResponse.prototype.serializeBinary = function ()
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.health.v1.HealthCheckResponse.serializeBinaryToWriter = function (message, writer) {
+proto.grpc.health.v1.HealthCheckResponse.serializeBinaryToWriter = (message, writer) => {
   var f = undefined;
   f = message.getStatus();
   if (f !== 0.0) {
