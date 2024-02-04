@@ -67,7 +67,7 @@ describe.skip("Health Checking", () => {
   it("should get NOT_FOUND if the service is not registered", async () => {
     const request = new health_pb.HealthCheckRequest();
     request.setService("not_registered");
-    return new Promise<void>(resolve => {
+    return new Promise<void>((resolve) => {
       healthClient.check(request, function (err, _response) {
         assert(err);
         assert.strictEqual(err.code, grpc.status.NOT_FOUND);
