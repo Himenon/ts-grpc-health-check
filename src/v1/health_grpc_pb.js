@@ -18,7 +18,6 @@
 // The canonical version of this proto can be found at
 // https://github.com/grpc/grpc-proto/blob/master/grpc/health/v1/health.proto
 //
-"use strict";
 var grpc = require("@grpc/grpc-js");
 var health_pb = require("./health_pb.js");
 

@@ -37,7 +37,7 @@ const createHealthServerImpl = (statusMap: StatusMap = defaultStatusMap, option?
         callback(null, res);
       }
     },
-    watch: call => {
+    watch: (call) => {
       option?.watchHooks?.(call.request);
       const service: string = call.request.getService();
       const interval = setInterval(() => {
