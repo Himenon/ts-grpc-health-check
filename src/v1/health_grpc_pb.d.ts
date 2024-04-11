@@ -5,7 +5,7 @@
 /* eslint-disable */
 
 import * as grpc from "@grpc/grpc-js";
-import * as health_pb from "./health_pb";
+import type * as health_pb from "./health_pb";
 
 interface IHealthService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
   check: IHealthService_ICheck;
