@@ -1,4 +1,4 @@
-import { Metadata, ServerErrorResponse, status as GrpcStatus } from "@grpc/grpc-js";
+import type { status as GrpcStatus, Metadata, ServerErrorResponse } from "@grpc/grpc-js";
 
 export type Options = {
   /** code - the gRPC status code. */

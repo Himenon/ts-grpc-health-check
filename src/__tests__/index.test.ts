@@ -1,8 +1,8 @@
 import * as grpc from "@grpc/grpc-js";
 import { assert, afterEach, beforeAll, describe, it, vi } from "vitest";
 
-import health, { StatusMap } from "../index.js";
-import * as health_grpc_pb from "../v1/health_grpc_pb";
+import health, { type StatusMap } from "../index.js";
+import type * as health_grpc_pb from "../v1/health_grpc_pb";
 import * as health_pb from "../v1/health_pb";
 
 const ServingStatus = health_pb.HealthCheckResponse.ServingStatus;
