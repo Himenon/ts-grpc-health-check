@@ -18,6 +18,7 @@
     "url": "https://github.com/Himenon"
   },
   "sideEffects": false,
+  "type": "module",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
   "types": "./lib/index.d.ts",

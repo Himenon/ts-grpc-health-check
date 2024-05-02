@@ -45,9 +45,19 @@ function deserialize_grpc_health_v1_HealthCheckResponse(buffer_arg) {
 }
 
 
+// Health is gRPC's mechanism for checking whether a server is able to handle
+// RPCs. Its semantics are documented in
+// https://github.com/grpc/grpc/blob/master/doc/health-checking.md.
 var HealthService = exports.HealthService = {
-  // If the requested service is unknown, the call will fail with status
-// NOT_FOUND.
+  // Check gets the health of the specified service. If the requested service
+// is unknown, the call will fail with status NOT_FOUND. If the caller does
+// not specify a service name, the server should respond with its overall
+// health status.
+//
+// Clients should set a deadline when calling Check, and can declare the
+// server unhealthy if they do not receive a timely response.
+//
+// Check implementations should be idempotent and side effect free.
 check: {
     path: '/grpc.health.v1.Health/Check',
     requestStream: false,
