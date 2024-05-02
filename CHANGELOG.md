@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.6"></a>
+## 1.3.6 (2024-05-02)
+
+
+### Chores
+
+* **deps:** update tsup settings ([#16](https://github.com/Himenon/ts-grpc-health-check/issues/16)) ([d4c21e3](https://github.com/Himenon/ts-grpc-health-check/commit/d4c21e3))
+
+
+
+
+
 <a name="1.3.5"></a>
 ## 1.3.5 (2024-04-11)
 
