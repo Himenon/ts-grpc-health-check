@@ -15,7 +15,8 @@
     "lib": ["dom", "es2023"],
     "rootDir": ".",
     "outDir": "lib",
-    "strict": true
+    "strict": true,
+    "allowJs": true
   },
   "ts-node": {
     "esm": true,
