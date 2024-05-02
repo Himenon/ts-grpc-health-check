@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.8"></a>
+## 1.3.8 (2024-05-02)
+
+
+### Bug Fixes
+
+* commonjs ext ([#18](https://github.com/Himenon/ts-grpc-health-check/issues/18)) ([6ea9250](https://github.com/Himenon/ts-grpc-health-check/commit/6ea9250))
+
+
+
+
+
 <a name="1.3.7"></a>
 ## 1.3.7 (2024-05-02)
 
