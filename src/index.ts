@@ -6,29 +6,20 @@ import * as health_pb from "./v1/health_pb.js";
 
 export type StatusMap = Record<string, number | undefined>;
 
-export const service = health_grpc_pb.HealthService;
+export { health_grpc_pb, health_pb };
 
 export type Option = {
   checkHooks?: (req: health_pb.HealthCheckRequest) => void;
   watchHooks?: (req: health_pb.HealthCheckRequest) => void;
 };
 
-const ServingStatus = {
-  UNKNOWN: 0,
-  SERVING: 1,
-  NOT_SERVING: 2,
-  SERVICE_UNKNOWN: 3,
-} as const;
-
-type ServingStatus = (typeof ServingStatus)[keyof typeof ServingStatus];
-
 const defaultStatusMap: StatusMap = {
-  "": ServingStatus.SERVING,
+  "": health_pb.HealthCheckResponse.ServingStatus.SERVING,
 };
 
-export const createHealthServerImpl = (statusMap: StatusMap = defaultStatusMap, option?: Option): health_grpc_pb.IHealthServer => {
+const createHealthServerImpl = (statusMap: StatusMap = defaultStatusMap, option?: Option): health_grpc_pb.IHealthServer => {
   const watchErrorMap: Record<string, Error> = {};
-  const watchStatusMap: Record<string, ServingStatus> = {};
+  const watchStatusMap: Record<string, health_pb.HealthCheckResponse.ServingStatus> = {};
   const server: health_grpc_pb.IHealthServer = {
     check: (call, callback) => {
       option?.checkHooks?.(call.request);
@@ -51,11 +42,11 @@ export const createHealthServerImpl = (statusMap: StatusMap = defaultStatusMap, 
       const service: string = call.request.getService();
       const interval = setInterval(() => {
         // Updated status is used for getting service status updates.
-        let servingStatus: ServingStatus = ServingStatus.SERVING;
+        let servingStatus: health_pb.HealthCheckResponse.ServingStatus = health_pb.HealthCheckResponse.ServingStatus.SERVING;
         const res = new health_pb.HealthCheckResponse();
         if (!statusMap[service]) {
           // Set the initial status
-          servingStatus = ServingStatus.SERVICE_UNKNOWN;
+          servingStatus = health_pb.HealthCheckResponse.ServingStatus.SERVICE_UNKNOWN;
           statusMap[service] = servingStatus;
           res.setStatus(servingStatus);
           call.write(res);
@@ -89,4 +80,10 @@ export const createHealthServerImpl = (statusMap: StatusMap = defaultStatusMap, 
   };
 
   return server;
+};
+
+export default {
+  createHealthServerImpl,
+  service: health_grpc_pb.HealthService,
+  Client: health_grpc_pb.HealthClient,
 };
