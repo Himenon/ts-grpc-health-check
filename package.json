@@ -42,7 +42,7 @@
   "directories": {
     "dist": "dist"
   },
-  "files": ["lib", "package.json", "README.md"],
+  "files": ["dist", "package.json", "README.md"],
   "scripts": {
     "build": "tsup src/*.ts",
     "clean": "rimraf dist",
