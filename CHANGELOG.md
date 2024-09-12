@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.10"></a>
+## 1.3.10 (2024-09-12)
+
+
+### Builds
+
+* revert build settings ([#19](https://github.com/Himenon/ts-grpc-health-check/issues/19)) ([70be4dd](https://github.com/Himenon/ts-grpc-health-check/commit/70be4dd))
+
+
+
+
+
 <a name="1.3.9"></a>
 ## 1.3.9 (2024-09-12)
 
