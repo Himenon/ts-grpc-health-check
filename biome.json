@@ -16,6 +16,6 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "ignore": ["dist", "devcontainer.json", "src/v1/health_grpc_pb.js", "src/v1/health_pb.js"]
+    "ignore": ["dist", "lib", "devcontainer.json", "src/v1/health_grpc_pb.js", "src/v1/health_pb.js"]
   }
 }

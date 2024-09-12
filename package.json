@@ -18,33 +18,16 @@
     "url": "https://github.com/Himenon"
   },
   "sideEffects": false,
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "node": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    },
-    "./*": {
-      "node": {
-        "types": "./dist/*.d.ts",
-        "default": "./dist/*.js"
-      },
-      "types": "./dist/*.d.ts",
-      "default": "./dist/*.js"
-    }
-  },
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "directories": {
     "dist": "dist"
   },
-  "files": ["dist", "package.json", "README.md"],
+  "files": ["lib", "package.json", "README.md"],
   "scripts": {
-    "build": "tsup src/*.ts",
+    "build:tsup": "tsup src/*.ts",
+    "build": "tsc -b tsconfig.esm.json",
     "clean": "rimraf dist",
     "lerna:version:up": "lerna version --yes",
     "release:github:registry": "pnpm publish --registry https://npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}",
